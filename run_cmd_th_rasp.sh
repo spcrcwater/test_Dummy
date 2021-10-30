@@ -11,7 +11,7 @@ if [[ $? -eq 0 ]]
     git pull origin main
     cicomid_new=$(git rev-parse HEAD)
     cicomid_new=${cicomid_new:0:7}
-    if [[ cicomid -ne cicomid_new ]]
+    if [[ "$cicomid" -ne "$cicomid_new" ]]
     then
       cicomid = cicomid_new
       sudo systemctl restart codetest.service
