@@ -5,7 +5,7 @@ wget -q --spider http://google.com
 cicomid=$(git rev-parse HEAD)
 if [[ $? -eq 0 ]]
  then
-    cd /home/pi/Desktop/waterspcrc/Ph-03/
+    cd /home/pi/Desktop/waterspcrc/test_Dummy/
     git pull origin main
     cicomid_new=$(git rev-parse HEAD)
     if [[ cicomid -ne cicomid_new ]]
