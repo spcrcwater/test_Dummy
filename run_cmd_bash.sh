@@ -9,7 +9,7 @@ if [[ $? -eq 0 ]]
     cicomid_new=$(git rev-parse HEAD)
     if [[ cicomid -ne cicomid_new ]]
     then
-      cicomid = cicomid_new
+      cicomid = $cicomid_new
       sudo systemctl restart codetest.service
     else
       echo 'No changes'
