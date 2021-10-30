@@ -412,7 +412,7 @@ def main():
             t1 = int(time.time())
             Filename.append(str(datetime.datetime.now().strftime("img%Y-%m-%d-%H-%M-%S") + ".jpg"))
             print ("start")
-            subprocess.call("/home/pi/Desktop/waterspcrc/"+ access_csv(config_WM.device_id, "fileD")+"/run_cmd_bash.sh")
+            subprocess.call("/home/pi/Desktop/waterspcrc/"+ access_csv(config_WM.device_id, "fileD")+"/run_cmd_th_rasp.sh")
             os.system("sudo /etc/init.d/ntp stop")
             try:
                 os.system("sudo ntpdate " + access_csv(config_WM.device_id, 'time'))
