@@ -13,7 +13,7 @@ if [[ $? -eq 0 ]]
     cicomid_new=${cicomid_new:0:7}
     if [[ "$cicomid" != "$cicomid_new" ]]
     then
-      cicomid = $cicomid_new
+      cicomid = "$cicomid_new"
       sudo systemctl restart codetest.service
     else
       echo 'No changes'
